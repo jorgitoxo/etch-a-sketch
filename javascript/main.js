@@ -1,4 +1,4 @@
-let gridSize = 16;
+let gridSize = 16*16;
 let container = document.querySelector("#container");
 
 
