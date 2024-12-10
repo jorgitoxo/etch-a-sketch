@@ -14,6 +14,6 @@ container.addEventListener("mouseover", (event) => {
         event.target.style.background = "#120055";
         setTimeout(() => {
             event.target.style.background = "";
-          }, 30000);
+          }, 1900);
     }
 },false,);
