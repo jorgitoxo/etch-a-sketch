@@ -9,7 +9,6 @@
     /* 2 * 16 = 32px -- 16 elements with margin of 1px at either side */
     /* 800 + 64 + 32 = 896px */
     width: 896px;
-    /* pointer-events: none; */
 }
 
 #container > div {
@@ -20,4 +19,11 @@
     /* Decoration */
     margin: 1px;
     border: 2px, solid, #120055;
+}
+
+#button-div {
+    display: flex;
+    justify-content: center;
+    width: 896px;
+    margin-bottom: 10px;
 }
