@@ -2,12 +2,14 @@
     display: flex;
     flex-wrap: wrap;
     background-color: #e9e7e4;
+    padding: 1px;
     /* Width breakdown */
     /* 50 * 16 = 800px -- 16 elements of width 50px */
     /* 4 * 16 = 64px -- 16 elements with border of 2px at either side */
     /* 2 * 16 = 32px -- 16 elements with margin of 1px at either side */
     /* 800 + 64 + 32 = 896px */
     width: 896px;
+    /* pointer-events: none; */
 }
 
 #container > div {
