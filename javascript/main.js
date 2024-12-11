@@ -13,7 +13,9 @@ function createPad(padSize) {
 
 function resetPad(padSize) {
     // Clear pad
-    document.getElementById("container").innerHTML = "";
+    // document.getElementById("container").innerHTML = "";
+    // document.getElementById("container").textContent = "";
+    document.getElementById("container").replaceChildren();
 
     // Create new pad
     createPad(padSize);
