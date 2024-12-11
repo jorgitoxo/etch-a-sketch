@@ -1,40 +1,40 @@
-#container {
+* div {
     display: flex;
+}
+
+#button-div, #container, .row {
+    width: 54rem;
+}
+
+#container {
     flex-wrap: wrap;
     background-color: #e9e7e4;
-    justify-content: center;
-    padding: 1px;
+    padding: 2px;
     gap: 1px;
-    /* Width breakdown */
-    /* 50 * 16 = 800px -- 16 elements of width 50px */
-    /* 4 * 16 = 64px -- 16 elements with border of 2px at either side */
-    /* 15px -- 16 elements with 15 gaps/edges of 1px between them */
-    /* 2px -- 1px of padding at each side */
-    /* 881px = 800 + 64 + 15 + 2 */
-    width: 881px;
-    /* height: 881px; */
 }
 
-#container > div {
-    display: flex;
-    /* flex-shrink: 1; */
-}
-
-#container > .row {
+#container div {
     flex-grow: 1;
-    width: 881px;
     gap: 1px;
 }
 
 #container .element {
     border: 2px, solid, #120055;
     aspect-ratio: 1/1;
-    flex-grow: 1;
 }
 
 #button-div {
-    display: flex;
     justify-content: center;
     margin-bottom: 10px;
-    width: 896px;
+}
+
+button {
+    background-color: #3882f6;
+    border: 1px solid royalblue;
+    border-radius: 8px;
+    color: #f9faf8;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    aspect-ratio: 16/9;
 }
