@@ -1,31 +1,50 @@
-let padWidth = 16;
-let padHeight = 16;
-let padSize = padWidth * padHeight;
 // Why does this work without the explicit declaration below ??
-// const containers = document.querySelector("#containers");
+// const container = document.querySelector("#container");
+// let contains = document.getElementById("container");
 
-for (let i = 0; i < padSize; i++) {
-    let div = document.createElement("div");
-    div.setAttribute('class', "element");
-    div.setAttribute('id', i+1);
-    container.appendChild(div);
+function createPad(padSize) {
+    for (let i = 0; i < padSize; i++) {
+        let div = document.createElement("div");
+        div.setAttribute('class', "element");
+        div.setAttribute('id', i+1);
+        container.appendChild(div);
+    }
 }
 
-container.addEventListener("mouseover", (event) => {
-    let elementClass = event.target.getAttribute("class");
-    if (elementClass === "element") {
-        event.target.style.background = "#120055";
-        setTimeout(() => {
-            event.target.style.background = "";
-          }, 1900);
-    }
-},false,);
+function resetPad(padSize) {
+    // Clear pad
+    document.getElementById("container").innerHTML = "";
 
-button.addEventListener('click', () => {
-    // pop up and capture new grid size dimensions
-    padWidth = parseInt(prompt("Enter pad width"));
-    padHeight = parseInt(prompt("Enter pad height"));
-    
-    // call function to reset/create new pad
-    // createPad();
-})
+    // Create new pad
+    createPad(padSize);
+}
+
+
+function sketch () {
+    let padWidth = 16;
+    let padHeight = 16;
+    let padSize = padWidth * padHeight;
+    createPad(padSize);
+
+    button.addEventListener('click', () => {
+        // pop up and capture new grid size dimensions
+        padWidth = parseInt(prompt("Enter pad width"));
+        padHeight = parseInt(prompt("Enter pad height"));
+        padSize = padWidth * padHeight;
+        
+        // call function to reset pad
+        resetPad(padSize);
+    });
+
+    container.addEventListener("mouseover", (event) => {
+        let elementClass = event.target.getAttribute("class");
+        if (elementClass === "element") {
+            event.target.style.background = "#120055";
+            setTimeout(() => {
+                event.target.style.background = "";
+              }, 1900);
+        }
+    },false,);
+}
+
+sketch();
