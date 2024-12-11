@@ -2,26 +2,34 @@
     display: flex;
     flex-wrap: wrap;
     background-color: #e9e7e4;
+    justify-content: center;
     padding: 1px;
+    gap: 1px;
     /* Width breakdown */
     /* 50 * 16 = 800px -- 16 elements of width 50px */
     /* 4 * 16 = 64px -- 16 elements with border of 2px at either side */
-    /* 2 * 16 = 32px -- 16 elements with margin of 1px at either side */
-    /* 800 + 64 + 32 = 896px */
-    width: 896px;
+    /* 15px -- 16 elements with 15 gaps/edges of 1px between them */
+    /* 2px -- 1px of padding at each side */
+    /* 881px = 800 + 64 + 15 + 2 */
+    width: 881px;
+    /* height: 881px; */
 }
 
 #container > div {
+    display: flex;
+    /* flex-shrink: 1; */
+}
+
+#container > .row {
+    flex-grow: 1;
+    width: 881px;
+    gap: 1px;
+}
+
+#container .element {
     border: 2px, solid, #120055;
-    width: 50px;
-    height: 50px;
-    margin: 1px;
-    /*  */
-    /* display: flex;
-    flex: 1, 0, auto; */
-    /* max-width: 440px; */
-    /* max-height: auto; */
-    /*  */
+    aspect-ratio: 1/1;
+    flex-grow: 1;
 }
 
 #button-div {
