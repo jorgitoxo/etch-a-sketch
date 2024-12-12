@@ -8,9 +8,27 @@
 
 #container {
     flex-wrap: wrap;
-    background-color: #e9e7e4;
     padding: 2px;
     gap: 1px;
+    background-color: #f1ece7;
+    
+    /* background test */
+    /* background: linear-gradient(in hsl longer hue 90deg, red 0 0);; */
+    /* background: linear-gradient( 90deg,
+    hsl(0, 100%, 50%),
+    hsl(30, 100%, 50%),
+    hsl(60, 100%, 50%),
+    hsl(90, 100%, 50%),
+    hsl(120, 100%, 50%),
+    hsl(150, 100%, 50%),
+    hsl(180, 100%, 50%),
+    hsl(210, 100%, 50%),
+    hsl(240, 100%, 50%),
+    hsl(270, 100%, 50%),
+    hsl(300, 100%, 50%),
+    hsl(330, 100%, 50%),
+    hsl(360, 100%, 50%)
+    ); */
 }
 
 #container div {

@@ -22,6 +22,17 @@ function resetPad(padSize) {
     createPad(padSize);
 }
 
+function randColor() {
+    let hue = (Math.random() * 4000**2);
+    // let saturation = (Math.random() * 100) + '%';
+    // let lightness = (Math.random() * 50) + '%';
+    let saturation = '100%';
+    let lightness = '50%';
+
+    let color = 'hsl('+ hue + ',' + saturation + ',' + lightness + ')';
+    return color;
+}
+
 function sketch () {
     // --  explore turning padSize into arrow function expression --
     let padSize = 16;
@@ -40,7 +51,7 @@ function sketch () {
     container.addEventListener("mouseover", (event) => {
         let elementClass = event.target.getAttribute("class");
         if (elementClass === "element") {
-            event.target.style.background = "#120055";
+            event.target.style.background = randColor();
             setTimeout(() => {
                 event.target.style.background = "";
               }, 1900);
